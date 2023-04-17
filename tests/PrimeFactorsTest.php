@@ -31,6 +31,11 @@ final class PrimeFactorsTest extends \PHPUnit\Framework\TestCase
     $this->assertSame([2, 2], $this->primeFactors(4));
   }
 
+  public function test_five_should_return_an_array_with_a_five(): void
+  {
+    $this->assertSame([5], $this->primeFactors(5));
+  }
+
   private function primeFactors(int $n): array
   {
     return $this->primeFactors->of($n);
