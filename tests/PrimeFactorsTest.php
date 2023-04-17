@@ -36,6 +36,11 @@ final class PrimeFactorsTest extends \PHPUnit\Framework\TestCase
     $this->assertSame([5], $this->primeFactors(5));
   }
 
+  public function test_six_should_return_an_array_with_a_two_and_a_three(): void
+  {
+    $this->assertSame([2, 3], $this->primeFactors(6));
+  }
+
   private function primeFactors(int $n): array
   {
     return $this->primeFactors->of($n);
