@@ -6,10 +6,22 @@ final class PrimeFactors
 {
     public function of(int $n): array
     {
-        if ($n > 1) {
-            return [$n];
+        $primeFactors = [];
+
+        $factor = 2;
+
+        while ($n !== 1) {
+            if ($n % $factor === 0) {
+                $n /= $factor;
+
+                array_push($primeFactors, $factor);
+
+                continue;
+            }
+
+            $factor++;
         }
 
-        return [];
+        return $primeFactors;
     }
 }
