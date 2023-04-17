@@ -23,8 +23,8 @@ git clone git@github.com:AssoDePicche/prime-factors-kata.git
 
 ## Running Tests
 
-```php
-php ./tests/PrimeFactorsTest.php
+```bash
+composer run tests
 ```
 
 ## Get in Touch
