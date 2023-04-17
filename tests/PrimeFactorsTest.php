@@ -24,4 +24,11 @@ final class PrimeFactorsTest extends \PHPUnit\Framework\TestCase
 
     $this->assertSame([2], $result);
   }
+
+  public function test_three_should_return_an_array_with_a_three(): void
+  {
+    $result = $this->primeFactors->of(3);
+
+    $this->assertSame([3], $result);
+  }
 }
