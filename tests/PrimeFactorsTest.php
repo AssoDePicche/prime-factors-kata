@@ -13,22 +13,21 @@ final class PrimeFactorsTest extends \PHPUnit\Framework\TestCase
 
   public function test_one_should_return_an_empty_array(): void
   {
-    $result = $this->primeFactors->of(1);
-
-    $this->assertSame([], $result);
+    $this->assertSame([], $this->primeFactors(1));
   }
 
   public function test_two_should_return_an_array_with_a_two(): void
   {
-    $result = $this->primeFactors->of(2);
-
-    $this->assertSame([2], $result);
+    $this->assertSame([2], $this->primeFactors(2));
   }
 
   public function test_three_should_return_an_array_with_a_three(): void
   {
-    $result = $this->primeFactors->of(3);
+    $this->assertSame([3], $this->primeFactors(3));
+  }
 
-    $this->assertSame([3], $result);
+  private function primeFactors(int $n): array
+  {
+    return $this->primeFactors->of($n);
   }
 }
