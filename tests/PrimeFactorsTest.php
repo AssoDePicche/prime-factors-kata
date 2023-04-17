@@ -17,4 +17,11 @@ final class PrimeFactorsTest extends \PHPUnit\Framework\TestCase
 
     $this->assertSame([], $result);
   }
+
+  public function test_two_should_return_an_array_with_a_two(): void
+  {
+    $result = $this->primeFactors->of(2);
+
+    $this->assertSame([2], $result);
+  }
 }
