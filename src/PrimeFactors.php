@@ -11,7 +11,9 @@ final class PrimeFactors
         $factor = 2;
 
         while ($n !== 1) {
-            if ($n % $factor === 0) {
+            $divisible = ($n % $factor) === 0;
+
+            if ($divisible) {
                 $n /= $factor;
 
                 array_push($primeFactors, $factor);
@@ -22,6 +24,6 @@ final class PrimeFactors
             $factor++;
         }
 
-        return $primeFactors;
+      return $primeFactors;
     }
 }
