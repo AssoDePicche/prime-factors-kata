@@ -61,6 +61,11 @@ final class PrimeFactorsTest extends \PHPUnit\Framework\TestCase
     $this->assertSame([5, 5], $this->primeFactors(25));
   }
 
+  public function test_prime_factors_of_sixty_four(): void
+  {
+    $this->assertSame([2, 2, 2, 2, 2, 2], $this->primeFactors(64));
+  }
+
   private function primeFactors(int $n): array
   {
     return $this->primeFactors->of($n);
