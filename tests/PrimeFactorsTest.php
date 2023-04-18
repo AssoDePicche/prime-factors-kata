@@ -46,6 +46,11 @@ final class PrimeFactorsTest extends \PHPUnit\Framework\TestCase
     $this->assertSame([7], $this->primeFactors(7));
   }
 
+  public function test_prime_factors_of_nine(): void
+  {
+    $this->assertSame([3, 3], $this->primeFactors(9));
+  }
+
   private function primeFactors(int $n): array
   {
     return $this->primeFactors->of($n);
